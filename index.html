@@ -98,11 +98,16 @@
           drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
 
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
+     
+      /* Used to match the functions with the second canvas as well */
+      var canvas2= document.getElementById('canvas2');
+      var con2= canvas2.getContext('2d')
+
+      //retains info regarding image in canvas 1   
+      const imageData= context.getImageData(0,0,600,500);
+      const data= imageData.data;
           
-    
-          
-          
-          
+            
         } // end of img.onload
         
         img.src = reader.result;
