@@ -106,9 +106,11 @@
       //retains info regarding image in canvas 1   
       const imageData= context.getImageData(0,0,600,500);
       const data= imageData.data;
-          
-            
-        } // end of img.onload
+
+      //creates a loop to go through the pixels in the image
+         for(let i=0; i< data.length; i+=4) {
+           data[i]=0; // the red pixels are removed
+     
         
         img.src = reader.result;
       } //  end of reader.onload
