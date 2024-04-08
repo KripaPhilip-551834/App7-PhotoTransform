@@ -98,10 +98,8 @@
           drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
 
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
-          /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-          /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
+    
           
           
           
@@ -133,7 +131,8 @@
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
       <div id="messageDisplayArea"></div>
-      
+     
+      //Code for making the first canvas
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
@@ -142,6 +141,15 @@
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
       </script>
+     
+    	//Code copied for the second canvas with "2" attached to it
+     <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the canvas and puts the text on the second canvas "myCanvas2" */
+        var canvas2 = document.getElementById('myCanvas2');
+        var context2 = canvas.getContext("2d");
+        context.font = '20pt Calibri';
+        context.fillStyle = "black";
+        context.fillText("Original image, but blue, will go here", 10, 20);
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
